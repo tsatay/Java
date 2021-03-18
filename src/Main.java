@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
 
     /*
@@ -67,18 +71,44 @@ public class Main {
         }
         //Comparing the first and second sum to determine a largest contiguous sum
         if (sum1 > sum2) {
-            //Store the value of the first sum and 
+            //Store the value of the first sum and
             return sum1;
         }
         //Store the value of the second sum and use it to display it
          return sum2;
         }
+      //Find a duplicate numbers in the array
+      private static List<Integer> duplicateValue(int[] numbers){
+        //Creating list to hold the result
+          ArrayList<Integer> list = new ArrayList<>();
+          //Loop through the given array
+          for (int i = 0; i < numbers.length; i++) {
+                   // Checking the value of an array if it is negative
+                  //if the value is negative, it indicates the value is a duplicate value
+                   if(numbers[Math.abs(Math.abs(numbers[i]))] < 0) {
+                       list.add(Math.abs(numbers[i]));
+
+                   }
+                   //Else use that value to locate the index in the array
+                   // to change the value at that index
+                   else {
+                       numbers[Math.abs(Math.abs(numbers[i]))]= -numbers[Math.abs(Math.abs(numbers[i]))];
+                   }
+          }
+                   //finally sort a duplicate values in the list
+                  Collections.sort(list);
+          return list;
+      }
 
 
     public static void main(String[] args) {
         //Creating the array for Testing purpose
-        int[] numbers = {1,90,100,2,5,3,4,6};
+        int[] numbers = {1, 2, 3, 4, 100, -5, -10, 7};
         //Display the result by calling the largestContiguousSum
-        System.out.println(largestContiguousSum(numbers));
+        System.out.println("The largest contiguous sum: ");
+        System.out.println(largestContiguousSum(numbers)+"\n");
+        int[] arr ={1,2,3,5,6,7,8,0,2,1,3,0};
+        System.out.println("Duplicate values in the array: ");
+        System.out.println(duplicateValue(arr));
     }
 }
