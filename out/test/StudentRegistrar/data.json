@@ -1,0 +1,23 @@
+{
+  "studentList" : [ {
+    "firstName" : "Ted",
+    "lastName" : "Satay",
+    "email" : "tedsatay@ambition.com",
+    "studentId" : 1230
+  }, {
+    "firstName" : "Kessy",
+    "lastName" : "James",
+    "email" : "KJames@ambition.com",
+    "studentId" : 1231
+  }, {
+    "firstName" : "Tod",
+    "lastName" : "John",
+    "email" : "tjohn@ambition.com",
+    "studentId" : 1232
+  }, {
+    "firstName" : "Farhad",
+    "lastName" : "Ahmed",
+    "email" : "fahmed@ambition.com",
+    "studentId" : 1234
+  } ]
+}
